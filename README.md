@@ -30,61 +30,55 @@ Edit the HTML files in `templates/partials/` to update your resume content:
 - `skills.html` - Technical skills
 - `projects.html` - Featured projects
 
-## Deploy (GitHub Pages)
+## Deploy (Cloudflare Pages)
 
-You can deploy your Zola-generated static site directly to GitHub Pages for fast, reliable, and free hosting.
+You can deploy your Zola-generated static site directly to Cloudflare Pages for fast, reliable, and free hosting with custom domain support.
 
 ### Prerequisites
 
-1. **GitHub Account**
+1. **Cloudflare Account**
 2. **Zola** static site generator installed (`zola build`)
 3. A repository for your resume site on GitHub
 
 ### Build & Deploy
 
-#### 1. Build the Site
+#### 1. Build the Site (Locally, Optional)
 
 ```bash
 zola build
 ```
 
-This will generate the static site in the `public/` directory.
+This will generate the static site in the `public/` directory.  
+Cloudflare Pages can also run this build step for you automatically.
 
-#### 2. Push to GitHub
+#### 2. Connect to Cloudflare Pages
 
-Commit and push your changes to your repository:
+- Go to [Cloudflare Pages](https://pages.cloudflare.com/).
+- Click **Create a Project** and connect your GitHub account.
+- Select your repository.
+- For **Framework preset**, choose "None" (for Zola).
+- For **Build command**, enter: `zola build`
+- For **Output directory**, enter: `public`
+- Click **Save and Deploy**.
 
-```bash
-git add .
-git commit -m "Build site for GitHub Pages"
-git push origin main
-```
+#### 3. Set Up Custom Domain
 
-#### 3. Configure GitHub Pages
+- In your Cloudflare Pages project, go to **Custom Domains**.
+- Add your custom domain (e.g., `jonathan.vercout.re`).
+- Follow the instructions to add the required DNS record(s) in your Cloudflare DNS dashboard.
 
-- Go to your repository on GitHub.
-- Click **Settings** > **Pages**.
-- Under **Source**, select the `main` branch and `/ (root)` or `/public` folder (depending on your setup).
-- Save.
-
-Your site will be available at `https://<username>.github.io/<repository>/` or your custom domain if configured.
-
-### Custom Domain (Optional)
-
-1. In **Settings > Pages**, add your custom domain.
-2. Update your DNS provider to point your domain to GitHub Pages.
-3. GitHub will automatically provision HTTPS.
+Your site will be available at your Cloudflare Pages URL (e.g., `your-site.pages.dev`) and your custom domain if configured.
 
 ### Tips
 
 - To use a custom domain, set the `base_url` in your `config.toml` to match your domain.
 - For clean URLs, Zola generates them by default (no `.html` in links).
-- If you need advanced redirects or headers, consider using a `_headers` or `_redirects` file, or configure via your domain provider.
+- If you need advanced redirects or headers, add a `_redirects` or `_headers` file to your project root.
 
 ### Resources
 
 - [Zola Documentation](https://www.getzola.org/documentation/)
-- [GitHub Pages Documentation](https://docs.github.com/en/pages)
+- [Cloudflare Pages Documentation](https://developers.cloudflare.com/pages/)
 
 ---
-*This guide replaces the previous Cloudflare Worker setup. For most static sites, GitHub Pages is sufficient and much simpler to maintain.*
+*This guide replaces the previous GitHub Pages setup. For most static sites, Cloudflare Pages is simple, fast, and offers excellent custom domain support.*
