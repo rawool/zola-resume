@@ -1,0 +1,30 @@
+name: Deploy Zola site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Set this to your default branch if different
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Zola
+        run: |
+          curl -sL -o zola.tar.gz https://github.com/getzola/zola/releases/latest/download/zola-v0.20.0-x86_64-unknown-linux-gnu.tar.gz
+          tar xzf zola.tar.gz
+          sudo mv zola /usr/local/bin
+
+      - name: Build site
+        run: zola build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          # Uncomment the following line if you want to keep build history
+          # keep_files: true
