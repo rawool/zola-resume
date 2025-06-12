@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jonathan Vercoutre</title>
+    <meta name="description" content="Jonathan Vercoutre | Senior Site Reliability Engineer">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-[var(--background)] text-[var(--text)] transition-colors duration-300 font-sans">
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+        <div class="absolute top-20 left-10 w-40 h-40 rounded-full bg-[var(--primary)] opacity-10 floating"></div>
+        <div class="absolute bottom-10 right-20 w-60 h-60 rounded-full bg-[var(--secondary)] opacity-10 floating" style="animation-delay: 2s;"></div>
+        <div class="absolute top-1/3 right-1/4 w-32 h-32 rounded-full bg-[var(--primary)] opacity-10 floating" style="animation-delay: 4s;"></div>
+    </div>
+
+    <div class="container mx-auto px-4 py-8 max-w-5xl">
+        <!-- Theme Selector -->
+        <div class="flex justify-end gap-3 mb-6">
+            <div class="theme-selector w-6 h-6 rounded-full bg-blue-500" onclick="changeTheme('blue')" title="Blue Theme"></div>
+            <div class="theme-selector w-6 h-6 rounded-full bg-purple-500" onclick="changeTheme('purple')" title="Purple Theme"></div>
+            <div class="theme-selector w-6 h-6 rounded-full bg-amber-500" onclick="changeTheme('amber')" title="Amber Theme"></div>
+            <button onclick="toggleDarkMode()" class="ml-4 px-3 py-1 rounded-md bg-[var(--primary)] text-white text-xs">
+                <i class="fas fa-moon"></i> Toggle Dark
+            </button>
+        </div>
+
+        <!-- Header -->
+        <header
+    class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-6"
+>
+    <div>
+        <h1 class="text-3xl font-bold mb-1">Jonathan Vercoutre</h1>
+        <h2 class="text-xl text-[var(--primary)] font-semibold mb-2">
+            Senior Site Reliability Engineer
+        </h2>
+        <p class="text-sm opacity-80 max-w-lg">
+            Jack of all trades infrastructure engineer with a web background,
+            specializing in high-traffic sites and HTTP. I treat software like
+            Lego bricks—building reliable, standardized solutions following KISS
+            principles. UNIX enthusiast who prioritizes stability over
+            bleeding-edge tech. As a versatile generalist, I'm experienced with
+            diverse infrastructures including secure payment processing
+            environments and always open to tools that improve system
+            reliability and operational stability. Available for remote work.
+        </p>
+    </div>
+    <div class="flex flex-col items-end">
+        <div class="flex items-center mb-2">
+            <i class="fas fa-envelope mr-2 text-[var(--primary)]"></i>
+            <span class="text-sm"
+                ><a href="mailto:cv@rawool.net">rawool@rawool.net</a></span
+            >
+        </div>
+        <div class="flex items-center mb-2">
+            <i class="fas fa-phone mr-2 text-[var(--primary)]"></i>
+            <span class="text-sm">(+33) 6 52 57 51 06</span>
+        </div>
+        <div class="flex items-center mb-2">
+            <i class="fas fa-map-marker-alt mr-2 text-[var(--primary)]"></i>
+            <span class="text-sm">Lille, FR</span>
+        </div>
+        <div class="flex items-center">
+            <i class="fab fa-linkedin mr-2 text-[var(--primary)]"></i>
+            <span class="text-sm"
+                ><a href="linkedin.com/in/raw00l"
+                    >linkedin.com/in/raw00l</a
+                ></span
+            >
+        </div>
+    </div>
+</header>
+
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+            <!-- Left Column -->
+            <div class="lg:col-span-2 space-y-8">
+                <!-- Experience -->
+                <section class="resume-section bg-[var(--card)] p-6 rounded-lg shadow-sm">
+    <h2 class="text-xl font-bold mb-4 border-b pb-2 border-[var(--primary)]">Work Experience</h2>
+    
+    <div class="mb-6">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold">Senior Site Reliability Engineer</h3>
+            <span class="text-xs bg-[var(--primary)] text-white px-2 py-1 rounded">November 2023 – Present</span>
+        </div>
+        <p class="text-sm text-[var(--primary)] mb-2">Shine</p>
+        <p class="text-sm mb-2">I arrived at the creation of the infrastructure team, when the company realized that it needed to have a dedicated team to manage the infrastructure. We are now a team of 3 people, and we are responsible for the entire infrastructure of Shine. My missions can be slight changes (like adding a optional feature to an existing resource), big projects (like implementing a complete hosting solution on top of GCP with Terraform), or to prepare the future by creating tailored Terraform modules for the developers. We rely heavily on tools like Terraform, GCP, ElasticSeach, Grafana.</p>
+        <p class="text-sm mb-2">My key responsibilities include managing Shine's entire infrastructure in GCP, covering containers (serverless), instances (MIG), queues, databases, and load-balancers. I spearheaded the transition from manual infrastructure management to Terraform, providing several repositories in self-service mode with helpful and tailored modules. Additionally, I automated processes via GitHub Actions and set up comprehensive monitoring with Grafana (in Terraform), managing logs, metrics, and dashboards.</p>
+    </div>
+    
+    <div class="mb-6">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold">Site Reliability Engineer</h3>
+            <span class="text-xs bg-[var(--primary)] text-white px-2 py-1 rounded">June 2021 – September 2023</span>
+        </div>
+        <p class="text-sm text-[var(--primary)] mb-2">Alma</p>
+        <p class="text-sm mb-2">I was the first Site Reliability Engineer when we started the Platform team. At that time, our team grew to 12 members, and we handled infrastructure (mostly cloud-based), security, data, and enhancing the developer experience.</p>
+        <p class="text-sm mb-2">We relied on Terraform, GCP, CloudFlare, Datadog, and Python for our work.</p>
+        <p class="text-sm mb-2">I managed Alma's entire infrastructure on GCP, including containers (K8S and serverless), queues, databases, load-balancers, and more. A major achievement was transitioning infrastructure management from Python scripts to Terraform. I ensured security and compliance through hardening, isolation, various mTLS setups with internal CAs, and utilizing CloudFlare (tunnels, rules, workers, access, LB). My work involved writing Python scripts, automating processes via GitHub Actions, and setting up comprehensive monitoring with Datadog (in Terraform) for logs, metrics, and dashboards. I also served on-call for Level 2 support.</p>
+    </div>
+    
+    <div class="mb-6">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold">System Administrator</h3>
+            <span class="text-xs bg-[var(--primary)] text-white px-2 py-1 rounded">March 2021 – May 2021</span>
+        </div>
+        <p class="text-sm text-[var(--primary)] mb-2">Entr'ouvert</p>
+        <p class="text-sm mb-2">I was responsible for overseeing web, mail, and DNS hosting services while ensuring security and compliance standards were met. My role involved handling automation and scripting tasks to improve operational efficiency, as well as providing monitoring and on-call support for critical systems.</p>
+    </div>
+
+    <div class="mb-6">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold">Devops Engineer (Data)</h3>
+            <span class="text-xs bg-[var(--primary)] text-white px-2 py-1 rounded">October 2019 – March 2021</span>
+        </div>
+        <p class="text-sm text-[var(--primary)] mb-2">PeopleDoc / UKG</p>
+        <p class="text-sm mb-2">I was one of the first members of a three-person team tasked with developing our first internal data warehouse. We also served as the bridge between the DBA, SRE, and BI teams.</p>
+        <p class="text-sm mb-2">Our work revolved around using Ansible, Airflow, and Python.</p>
+        <p class="text-sm mb-2">I managed BI servers for batch processing, Looker data exploration, and Airflow platforms while acting as the technical point of contact for infrastructure-related queries from BI analysts and Data engineers. My technical work included scripting in Python, creating Debian packages, and handling Python packaging. I automated tasks using Ansible and Jenkins, and implemented monitoring solutions using Prometheus and Datadog.</p>
+    </div>
+
+    <div class="mb-6">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold">Site Reliability Engineer</h3>
+            <span class="text-xs bg-[var(--primary)] text-white px-2 py-1 rounded">January 2018 – October 2019</span>
+        </div>
+        <p class="text-sm text-[var(--primary)] mb-2">PeopleDoc</p>
+        <p class="text-sm mb-2">I was part of a team of five people responsible for maintaining the entire PeopleDoc infrastructure.</p>
+        <p class="text-sm mb-2">Our work heavily relied on Ansible and Openstack, requiring a deep understanding of the PeopleDoc systems.</p>
+        <p class="text-sm mb-2">I managed the PeopleDoc applications' infrastructure servers hosted on Openstack clusters while overseeing both public and internal load-balancers and core services. My work focused on automating processes using Ansible and Openstack Heat, enhancing security and hardening services, and implementing monitoring solutions with Prometheus.</p>
+    </div>
+
+    <div class="mb-6">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold">Devops Engineer</h3>
+            <span class="text-xs bg-[var(--primary)] text-white px-2 py-1 rounded">June 2015 – January 2018</span>
+        </div>
+        <p class="text-sm text-[var(--primary)] mb-2">OVH</p>
+        <p class="text-sm mb-2">I joined a five-person team tasked with transforming OVH's neglected core infrastructure into a stable, uniform, and scalable platform. Managing over 1,000 servers, we were responsible for the entire internal information systems ecosystem, including public web servers, APIs, databases, task workers, and load balancers.</p>
+        <p class="text-sm mb-2">A critical aspect of our work involved maintaining PCIDSS-certified systems at the highest compliance level, covering both the Private Cloud Computing service and internal payment systems. We relied heavily on Puppet for automation and configuration management, while using Shinken for comprehensive system monitoring.</p>
+        <p class="text-sm mb-2">Our key achievements included migrating legacy and unmaintained services to standardized, hardened platforms while implementing comprehensive automation and configuration management using Puppet. I managed corporate bastion hosts and security infrastructure, ensuring PCIDSS compliance across all critical systems, and provided Level 2/3 on-call support for mission-critical services.</p>
+    </div>
+
+    <div class="mb-6">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold">System Administrator</h3>
+            <span class="text-xs bg-[var(--primary)] text-white px-2 py-1 rounded">September 2012 – May 2015</span>
+        </div>
+        <p class="text-sm text-[var(--primary)] mb-2">ISVTEC</p>
+        <p class="text-sm mb-2">I managed web, mail, SQL, and DNS services across approximately 300 customer servers. My responsibilities included performing seamless mail and website migrations with zero downtime, migrating services to more scalable and fault-tolerant systems, and providing Level 1 on-call support to ensure continuous service availability.</p>
+    </div>
+
+    <div class="mb-6">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold">System Administrator</h3>
+            <span class="text-xs bg-[var(--primary)] text-white px-2 py-1 rounded">September 2011 – September 2012</span>
+        </div>
+        <p class="text-sm text-[var(--primary)] mb-2">ICE Development</p>
+        <p class="text-sm mb-2">I managed web, mail, and DNS hosting services while overseeing firewalls and network management. My role involved handling website and mail migrations, running datacenter operations, and ensuring security across all systems. I also provided helpdesk support and served as Level 1 on-call support for critical incidents.</p>
+    </div>
+
+    <div class="mb-6">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold">IT Consultant</h3>
+            <span class="text-xs bg-[var(--primary)] text-white px-2 py-1 rounded">February 2011 – September 2011</span>
+        </div>
+        <p class="text-sm text-[var(--primary)] mb-2">Astek</p>
+        <p class="text-sm mb-2">I was responsible for maintaining, repairing, and operating several Unix systems while serving as the Unix team specialist. This role required deep technical expertise in Unix environments and the ability to troubleshoot complex system issues.</p>
+    </div>
+
+    <div>
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold">System and Database Administrator</h3>
+            <span class="text-xs bg-[var(--primary)] text-white px-2 py-1 rounded">April 2007 – January 2011</span>
+        </div>
+        <p class="text-sm text-[var(--primary)] mb-2">Acteos</p>
+        <p class="text-sm mb-2">I managed our internal infrastructure with a focus on Oracle Database and Oracle Application Server across 70 servers. My responsibilities included performing installations and migrations of Acteos products on-premise for clients, as well as providing Level 3 support for complex technical issues that required deep system knowledge.</p>
+    </div>
+</section>
+                <!-- Skills -->
+                 <!-- adjust width if you want to increase skills percentage -->
+                <section class="resume-section bg-[var(--card)] p-6 rounded-lg shadow-sm">
+    <h2 class="text-xl font-bold mb-4 border-b pb-2 border-[var(--primary)]">
+        Technical Skills
+    </h2>
+
+    <div class="space-y-6">
+        <!-- Daily Use Skills -->
+        <div>
+            <h3 class="font-semibold text-md mb-3 text-[var(--primary)]">I work with it every day</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-[var(--card)] border border-[var(--primary)]/20 px-4 py-3 rounded-md">
+                    <span class="text-sm font-medium block mb-1 text-[var(--primary)]">Cloud - GCP</span>
+                    <p class="text-xs text-[var(--text)]/70">Managing complete infrastructure including containers, databases, load balancers, and serverless functions</p>
+                </div>
+                <div class="bg-[var(--card)] border border-[var(--primary)]/20 px-4 py-3 rounded-md">
+                    <span class="text-sm font-medium block mb-1 text-[var(--primary)]">Infra-as-code (Terraform)</span>
+                    <p class="text-xs text-[var(--text)]/70">Creating tailored modules and self-service repositories for complete infrastructure automation</p>
+                </div>
+                <div class="bg-[var(--card)] border border-[var(--primary)]/20 px-4 py-3 rounded-md">
+                    <span class="text-sm font-medium block mb-1 text-[var(--primary)]">Web stack and architectures</span>
+                    <p class="text-xs text-[var(--text)]/70">Designing scalable web architectures with load balancers, CDNs, and microservices patterns</p>
+                </div>
+                <div class="bg-[var(--card)] border border-[var(--primary)]/20 px-4 py-3 rounded-md">
+                    <span class="text-sm font-medium block mb-1 text-[var(--primary)]">Networking & Firewalls</span>
+                    <p class="text-xs text-[var(--text)]/70">Configuring complex network topologies, security groups, and firewall rules for enterprise environments</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Intensive Past Use -->
+        <div>
+            <h3 class="font-semibold text-md mb-3 text-[var(--primary)]">I used it intensively in the past</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-[var(--card)] border border-[var(--primary)]/20 px-4 py-3 rounded-md">
+                    <span class="text-sm font-medium block mb-1 text-[var(--primary)]">Core Internet Services (DNS, SMTP, HTTP)</span>
+                    <p class="text-xs text-[var(--text)]/70">Deep expertise in mail servers, DNS management, HTTP caching, and key-value stores at scale</p>
+                </div>
+                <div class="bg-[var(--card)] border border-[var(--primary)]/20 px-4 py-3 rounded-md">
+                    <span class="text-sm font-medium block mb-1 text-[var(--primary)]">Cloudflare Zero Trust</span>
+                    <p class="text-xs text-[var(--text)]/70">Implementing secure access solutions with tunnels, access policies, and identity management</p>
+                </div>
+                <div class="bg-[var(--card)] border border-[var(--primary)]/20 px-4 py-3 rounded-md">
+                    <span class="text-sm font-medium block mb-1 text-[var(--primary)]">Cloudflare Application Security</span>
+                    <p class="text-xs text-[var(--text)]/70">Configuring WAF rules, DDoS protection, bot management, and performance optimization</p>
+                </div>
+                <div class="bg-[var(--card)] border border-[var(--primary)]/20 px-4 py-3 rounded-md">
+                    <span class="text-sm font-medium block mb-1 text-[var(--primary)]">Ansible/Puppet</span>
+                    <p class="text-xs text-[var(--text)]/70">Automating configuration management and deployment across hundreds of servers</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Some Experience -->
+        <div>
+            <h3 class="font-semibold text-md mb-3 text-[var(--primary)]">I've got some experience with it</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-[var(--card)] border border-[var(--primary)]/20 px-4 py-3 rounded-md">
+                    <span class="text-sm font-medium block mb-1 text-[var(--primary)]">Python</span>
+                    <p class="text-xs text-[var(--text)]/70">Writing automation scripts, data processing tools, and creating Debian packages</p>
+                </div>
+                <div class="bg-[var(--card)] border border-[var(--primary)]/20 px-4 py-3 rounded-md">
+                    <span class="text-sm font-medium block mb-1 text-[var(--primary)]">Cloud - AWS</span>
+                    <p class="text-xs text-[var(--text)]/70">Basic experience with EC2, S3, and core AWS services for cloud migrations</p>
+                </div>
+                <div class="bg-[var(--card)] border border-[var(--primary)]/20 px-4 py-3 rounded-md">
+                    <span class="text-sm font-medium block mb-1 text-[var(--primary)]">Kubernetes</span>
+                    <p class="text-xs text-[var(--text)]/70">Container orchestration, deployment management, and cluster operations</p>
+                </div>
+                <div class="bg-[var(--card)] border border-[var(--primary)]/20 px-4 py-3 rounded-md">
+                    <span class="text-sm font-medium block mb-1 text-[var(--primary)]">Monitoring (Grafana, Datadog)</span>
+                    <p class="text-xs text-[var(--text)]/70">Setting up dashboards, alerts, log aggregation, and metrics collection</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Basic Past Use -->
+        <div>
+            <h3 class="font-semibold text-md mb-3 text-[var(--primary)]">I used it basically in the past</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-[var(--card)] border border-[var(--primary)]/20 px-4 py-3 rounded-md">
+                    <span class="text-sm font-medium block mb-1 text-[var(--primary)]">Openstack</span>
+                    <p class="text-xs text-[var(--text)]/70">Private cloud management and Heat orchestration for infrastructure provisioning</p>
+                </div>
+                <div class="bg-[var(--card)] border border-[var(--primary)]/20 px-4 py-3 rounded-md">
+                    <span class="text-sm font-medium block mb-1 text-[var(--primary)]">Oracle Database</span>
+                    <p class="text-xs text-[var(--text)]/70">Database administration, performance tuning, and Oracle Application Server management</p>
+                </div>
+                <div class="bg-[var(--card)] border border-[var(--primary)]/20 px-4 py-3 rounded-md">
+                    <span class="text-sm font-medium block mb-1 text-[var(--primary)]">Shinken/Prometheus</span>
+                    <p class="text-xs text-[var(--text)]/70">Legacy monitoring systems setup and maintenance for large-scale infrastructure</p>
+                </div>
+                <div class="bg-[var(--card)] border border-[var(--primary)]/20 px-4 py-3 rounded-md">
+                    <span class="text-sm font-medium block mb-1 text-[var(--primary)]">Jenkins</span>
+                    <p class="text-xs text-[var(--text)]/70">CI/CD pipeline automation and build process management</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+                <!-- Projects -->
+                <section class="resume-section bg-[var(--card)] p-6 rounded-lg shadow-sm">
+    <h2 class="text-xl font-bold mb-4 border-b pb-2 border-[var(--primary)]">Hobbies</h2>
+
+    <div class="mb-6">
+        <h3 class="font-semibold mb-1">Video Games</h3>
+        <p class="text-sm mb-2">I grew up with a Master System joypad and never stopped playing games. My last crush is Crusader Kings III (250h+)</p>
+        <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-[var(--secondary)] bg-opacity-20 px-2 py-1 rounded">Day Of Defeat</span>
+            <span class="text-xs bg-[var(--secondary)] bg-opacity-20 px-2 py-1 rounded">Crusader Kings III</span>
+            <span class="text-xs bg-[var(--secondary)] bg-opacity-20 px-2 py-1 rounded">PUBG</span>
+        </div>
+    </div>
+
+    <div class="mb-6">
+        <h3 class="font-semibold mb-1">Self-Hosting</h3>
+        <p class="text-sm mb-2">Since my teenage years, I've been self-hosting my own server at home to host my basic services and have a place to try new things.</p>
+    </div>
+
+    <div class="mb-6">
+        <h3 class="font-semibold mb-1">Running</h3>
+        <p class="text-sm mb-2">I learned to run properly a few years ago and pushed my own limits in this sport. I since maintain some running habits.</p>
+        <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-[var(--secondary)] bg-opacity-20 px-2 py-1 rounded">10K</span>
+            <span class="text-xs bg-[var(--secondary)] bg-opacity-20 px-2 py-1 rounded">Half Marathon</span>
+        </div>
+    </div>
+
+    <div>
+        <h3 class="font-semibold mb-1">Music</h3>
+        <p class="text-sm mb-2">I started to learn music a few months ago, trying to discover a new universe.</p>
+        <div class="flex flex-wrap gap-2">
+            <span class="text-xs bg-[var(--secondary)] bg-opacity-20 px-2 py-1 rounded">Piano</span>
+            <span class="text-xs bg-[var(--secondary)] bg-opacity-20 px-2 py-1 rounded">Computer Generated Music</span>
+        </div>
+    </div>
+</section>
+</div>
+
+
+            <!-- Right Column -->
+            <div class="space-y-8">
+
+                <!-- Languages -->
+                <section class="resume-section bg-[var(--card)] p-6 rounded-lg shadow-sm">
+    <h2 class="text-xl font-bold mb-4 border-b pb-2 border-[var(--primary)]">
+        Languages
+    </h2>
+
+    <div class="mb-3">
+        <div class="flex justify-between text-sm mb-1">
+            <span>French</span>
+            <span>Native</span>
+        </div>
+        <div class="skill-bar bg-gray-200">
+            <div class="progress bg-[var(--primary)]" style="width: 100%"></div>
+        </div>
+    </div>
+
+    <div class="mb-3">
+        <div class="flex justify-between text-sm mb-1">
+            <span>English</span>
+            <span>Professional</span>
+        </div>
+        <div class="skill-bar bg-gray-200">
+            <div class="progress bg-[var(--primary)]" style="width: 80%"></div>
+        </div>
+    </div>
+
+    <div>
+        <div class="flex justify-between text-sm mb-1">
+            <span>Spanish</span>
+            <span>Beginner<rspan>
+        </div>
+        <div class="skill-bar bg-gray-200">
+            <div class="progress bg-[var(--primary)]" style="width: 60%"></div>
+        </div>
+    </div>
+</section>
+
+                <!-- Education -->
+                <section class="resume-section bg-[var(--card)] p-6 rounded-lg shadow-sm">
+    <h2 class="text-xl font-bold mb-4 border-b pb-2 border-[var(--primary)]">Education</h2>
+    
+    <div class="mb-6">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold">BSc in Computer Science (DA2I)</h3>
+            <span class="text-xs bg-[var(--primary)] text-white px-2 py-1 rounded">September 2006 – July 2007</span>
+        </div>
+        <p class="text-sm text-[var(--primary)] mb-2">Université des Sciences et Technologie - Lille 1</p>
+        <p class="text-sm">This was a year focused on developing and managing network services. I worked with Java (J2EE, servlets, and JSP) for development, and handled various Unix services like DNS, HTTP, RDBMS, and security on the administration side. I wrapped up this specialization with a three-month internship at a software company.</p>
+    </div>
+    
+    <div class="mb-6">
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold">DUT (two years degree) in Computer Science</h3>
+            <span class="text-xs bg-[var(--primary)] text-white px-2 py-1 rounded">September 2004 – July 2006</span>
+        </div>
+        <p class="text-sm text-[var(--primary)] mb-2">Université du Littoral Cote d'Opale - Calais</p>
+        <p class="text-sm">The program spans two years and provides a solid foundation in computer science. It covers programming languages such as Ada, C, and Java, along with databases like PostgreSQL and Oracle. Students also learn about networks including TCP/IP and X25, as well as systems like GNU/Linux. The curriculum balances practical skills and theoretical knowledge, preparing students for diverse roles in the tech industry or further studies.</p>
+    </div>
+    
+    <div>
+        <div class="flex justify-between items-start">
+            <h3 class="font-semibold">Baccalauréat S</h3>
+            <span class="text-xs bg-[var(--primary)] text-white px-2 py-1 rounded">September 2000 – July 2004</span>
+        </div>
+        <p class="text-sm text-[var(--primary)] mb-2">Lycée Notre Dame de Sion - Saint-Omer</p>
+        <p class="text-sm">The Baccalauréat Scientifique, commonly known as "Bac S," is a French national academic qualification. It primarily focuses on the physical sciences, such as physics and chemistry, as well as mathematics, fostering a comprehensive understanding of these key areas. It also encompasses biology.</p>
+    </div>
+</section>
+
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="mt-8 text-center text-xs opacity-70">
+            <p>&copy; 2025 Jonathan Vercoutre. All rights reserved.</p>
+        </footer>
+
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
