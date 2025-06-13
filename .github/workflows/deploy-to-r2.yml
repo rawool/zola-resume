@@ -44,7 +44,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
         run: |
           aws s3 sync public/ s3://${R2_BUCKET} \
-            --endpoint-url=https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com \
+            --endpoint-url=https://${R2_ACCOUNT_ID}.eu.r2.cloudflarestorage.com \
             --region ${R2_REGION} \
             --delete
 
