@@ -1,6 +1,6 @@
 # The URL the site will be built for
-title = "Jonathan Vercoutre - Senior Site Reliability Engineer"                                                                     # Your site name
-description = "Resume page of Jonathan Vercoutre, Senior Site Reliability Engineer, in Lille, France, with 18 years of experience." # Shown in meta and hero
+title = "Jonathan Vercoutre - Senior Site Reliability Engineer"                                                                                                # Your site name
+description = "Curriculum Vitae of Jonathan Vercoutre, Senior Site Reliability Engineer, in Lille, France, with 18 years of experience ruling infrastructures" # Shown in meta and hero
 base_url = "https://jonathan.vercout.re"
 
 # Use base_url present below if deploying using GitHub Pages
