@@ -1,0 +1,51 @@
+# Deploy Zola site to Cloudflare R2 using GitHub Actions
+
+name: Deploy to Cloudflare R2
+
+on:
+  push:
+    branches:
+      - main # Set this to your default branch if different
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+      R2_BUCKET: ${{ secrets.R2_BUCKET_NAME }}
+      R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+      R2_REGION: auto
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install Zola
+        run: |
+          curl -sL -o zola.tar.gz https://github.com/getzola/zola/releases/latest/download/zola-v0.20.0-x86_64-unknown-linux-gnu.tar.gz
+          tar xzf zola.tar.gz
+          sudo mv zola /usr/local/bin
+
+      - name: Build site
+        run: zola build
+
+      - name: Install AWS CLI
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y awscli
+
+      - name: Sync public/ to Cloudflare R2
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+        run: |
+          aws s3 sync public/ s3://${R2_BUCKET} \
+            --endpoint-url=https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com \
+            --region ${R2_REGION} \
+            --delete
+
+      - name: Print deployment URL (informational)
+        run: |
+          echo "Your site has been deployed to Cloudflare R2 bucket: ${R2_BUCKET}"
