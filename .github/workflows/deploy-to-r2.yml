@@ -31,10 +31,12 @@ jobs:
       - name: Build site
         run: zola build
 
-      - name: Install AWS CLI
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y awscli
+      - id: install-aws-cli
+        uses: unfor19/install-aws-cli-action@v1
+        with:
+          version: 2 # default
+          verbose: false # default
+          arch: amd64
 
       - name: Sync public/ to Cloudflare R2
         env:
